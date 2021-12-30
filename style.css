@@ -1,14 +1,13 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 .hero {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100vh;
   background: #ffffff;
-
 }
 nav {
   display: flex;
@@ -19,7 +18,7 @@ nav {
   background: whitesmoke;
 }
 nav ul li {
-  display:  inline-block;
+  display: inline-block;
   list-style: none;
   margin: 5px 10px;
 }
@@ -39,58 +38,58 @@ nav ul li a:hover {
 
 /*///////////////////typing text////////////////////*/
 
-
-  .wrapper{
-    display: flex;
+.wrapper {
+  display: flex;
+}
+.wrapper .static-txt {
+  color: #000;
+  font-size: 70px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li {
+  list-style: none;
+  color: crimson;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -360px;
   }
-  .wrapper .static-txt{
-    color: #000;
-    font-size: 70px;
-    font-weight: 400;
+}
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-left: 2px solid #fc6d6d;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
   }
-  .wrapper .dynamic-txts{
-    margin-left: 15px;
-    height: 90px;
-    line-height: 90px;
-    overflow: hidden;
-  }
-  .dynamic-txts li{
-    list-style: none;
-    color: crimson;
-    font-size: 60px;
-    font-weight: 500;
-    position: relative;
-    top: 0;
-    animation: slide 12s steps(4) infinite;
-  }
-  @keyframes slide {
-    100%{
-     top: -360px;
-    }
-  }
-  .dynamic-txts li span{
-    position: relative;
-    margin: 5px 0;
-    line-height: 90px;
-  }
-  .dynamic-txts li span::after{
-    content: "";
-    position: absolute;
+  100% {
     left: 0;
-    height: 100%;
-    width: 100%;
-    background: #fff;
-    border-left: 2px solid #FC6D6D;
-    animation: typing 3s steps(10) infinite;
   }
-  @keyframes typing {
-    40%, 60%{
-     left: calc(100% + 30px);
-    }
-    100%{
-     left: 0;
-    }
-  }
+}
 /*//////////////////typing animation//////////////////////*/
 
 .wrapper {
@@ -99,11 +98,10 @@ nav ul li a:hover {
 }
 .detail {
   margin-left: 8%;
-    
 }
-.detail p{
+.detail p {
   color: rgb(110, 103, 103);
-  font-size: 20px;
+  font-size: 15px;
 }
 .detail a {
   background-color: black;
@@ -111,44 +109,315 @@ nav ul li a:hover {
   text-decoration: none;
   font-weight: bold;
   color: #fff;
-  display: inline-block;   
-  margin: 20px 0;   
+  display: inline-block;
+  margin: 20px 0;
   border: 0.5px solid black;
-  border-radius: 50px;  
+  border-radius: 50px;
 }
 .detail a:hover {
   background: linear-gradient(120deg, #f2709c, #ff9472);
   border: 1px solid #f2709c;
-  box-shadow: 5px 10px 30px rgba(36, 36, 37, 0.5);
-  transition: all 0.5s ease-in 0.25;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+  transition: all 0.25s ease-in;
 }
 .image {
   width: 300px;
   height: 300px;
 }
- .sufian{
+.sufian {
   height: 100%;
   position: relative;
   margin-left: 266%;
   margin-top: -69%;
-} 
-.main{
+}
+.main {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
-.about{
+.about {
   display: flex;
   justify-content: space-around;
   margin-right: 10rem;
+  padding-bottom: 50px;
 }
-.image2{
+.image2 {
   width: 300px;
   height: 300px;
 }
-.sufian2{
+.sufian2 {
   height: 100%;
   position: relative;
   margin-left: 17%;
-  margin-top: -16%;
+  margin-top: 1%;
+}
+.aboutme {
+  flex-direction: row;
+  margin-left: 20rem;
+}
+.aboutme h1 {
+  font-size: 36px;
+  margin: 30px 0px;
+  font-weight: 600;
+}
+.aboutme h4 {
+  font-weight: 400;
+}
+.aboutme P {
+  color: rgb(110, 103, 103);
+  font-size: 15px;
+}
+.aboutme a {
+  background-color: black;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+  margin: 20px 0;
+  border: 0.5px solid black;
+  border-radius: 50px;
+}
+.aboutme a:hover {
+  background: linear-gradient(120deg, #f2709c, #ff9472);
+  border: 1px solid #f2709c;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+  transition: all 0.25s ease-in;
+}
+
+/* part 3 */
+.container {
+  width: 100%;
+  height: 650px;
+  margin: 0;
+  text-align: center;
+}
+.fristtext h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+.fristtext p {
+  width: 670px;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+  font-size: 14px;
+}
+.service {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 45px;
+}
+.ser1,
+.ser2 {
+  width: 100%;
+  overflow: hidden;
+}
+.ser2 {
+  padding-top: 30px;
+}
+.ser1 div,
+.ser2 div {
+  width: 32%;
+  float: left;
+  padding: 5px;
+  margin: 0 auto;
+}
+.service i {
+  font-size: 45px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
+.service h4 {
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 20px;
+}
+.service p {
+  color: rgba(0, 0, 0, 0.6);
+}
+.ser1 div:hover {
+  background-color: #8293ff;
+  color: white;
+}
+.ser1 div:hover i {
+  color: white;
+}
+.ser1 div:hover h4 {
+  color: white;
+}
+.ser1 div:hover p {
+  color: white;
+}
+.ser2 div:hover {
+  background-color: #8293ff;
+}
+.ser2 div:hover i {
+  color: white;
+}
+.ser2 div:hover h4 {
+  color: white;
+}
+.ser2 div:hover p {
+  color: white;
+}
+
+/* part 4 */
+
+.complete {
+  width: 100%;
+  height: 35%;
+  background-color: #b9bdda;
+}
+.complete div {
+  float: left;
+  width: 20%;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  left: 250px;
+  overflow: hidden;
+}
+.complete h1,
+.complete p {
+  text-align: center;
+  color: #fff;
+}
+
+/* part 5 */
+.portfolio {
+  width: 100%;
+  box-sizing: border-box;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr; */
+}
+.portfolio .starttext {
+  text-align: center;
+  padding: 80px 0;
+}
+.portfolio .starttext h1 {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.9);
+}
+.portfolio .starttext p {
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.portfolio .imgg {
+  width: 75%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  grid-gap: 20px;
+}
+.portfolio .imgg div {
+  width: 340px;
+  height: 339px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+.portfolio .imgg h1 {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.9);
+}
+.portfolio .imgg p {
+  color: rgba(0, 0, 0, 0.7);
+}
+.portfolio .figure {
+  width: 340px;
+  height: 339px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 3%;
+}
+.portfolio figure:hover img {
+  background: linear-gradient(40deg, #8490ff 40%, #62bdfc 100%);
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+}
+/* part 6*/
+.crd {
+  width: 100%;
+  height: 700px;
+  padding-top: 50px;
+}
+.crd .text4{
+  text-align: center;
+  padding: 2% 0;
+}
+.crd .text4 h1{
+  font-size: 40px;
+  line-height: 0;
+  padding-top: 15px;
+}
+.crd .text4 p{
+  margin-top: 30px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.crd .card{
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.crd .card1{
+  width: 300px;
+  background-color: rgb(249, 249, 255);
+  text-align: center;
+  border: 1px solid rgba(0,0,0, 0.1);
+  margin-left: 2rem;
+}
+.crd.card1 h1{
+  font-size: 50px;
+  padding-top: 8px;
+}
+.card1 p{
+  padding: 1rem;
+}
+.crd .card1 .price{
+  font-size: 40px;
+}
+/* .crd .card1 input{
+  outline: none;
+  background-color: #8293ff;
+  color: white;
+  font-size: 25px;
+  padding: 6px 60px;
+  font-weight: bold;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: all 300ms ease 0ms;
+}
+.crd.card1:hover{
+  background-color: #8293ff;
+  color: white;
+  transform: scale(1.05);
+  border: 1px solid rgba(130, 147, 255, 0.5);
+  box-shadow: 0 8px 12px 0 rgba(0,0,0, 0.5);
+} */
+
+.crd .card {
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.crd .card1 {
+  width: 300px;
+  /* height: 600px; */
+  background-color: rgb(249, 249, 255);
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: 2em;
+  transition: all 300ms ease 0ms;
+}
+.crd .card1:hover input{
+  color: rgba(0,0,0, 0.9);
+  background-color: white;
 }
