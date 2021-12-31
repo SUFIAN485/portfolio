@@ -10,12 +10,13 @@
   background: #ffffff;
 }
 nav {
+  position: fixed;
   display: flex;
   width: 80%;
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  background: whitesmoke;
+  background: white;
 }
 nav ul li {
   display: inline-block;
@@ -345,62 +346,19 @@ nav ul li a:hover {
   height: 700px;
   padding-top: 50px;
 }
-.crd .text4{
+.crd .text4 {
   text-align: center;
   padding: 2% 0;
 }
-.crd .text4 h1{
+.crd .text4 h4 {
   font-size: 40px;
   line-height: 0;
   padding-top: 15px;
 }
-.crd .text4 p{
+.crd .text4 p {
   margin-top: 30px;
   color: rgba(0, 0, 0, 0.7);
 }
-.crd .card{
-  width: 75%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-}
-.crd .card1{
-  width: 300px;
-  background-color: rgb(249, 249, 255);
-  text-align: center;
-  border: 1px solid rgba(0,0,0, 0.1);
-  margin-left: 2rem;
-}
-.crd.card1 h1{
-  font-size: 50px;
-  padding-top: 8px;
-}
-.card1 p{
-  padding: 1rem;
-}
-.crd .card1 .price{
-  font-size: 40px;
-}
-/* .crd .card1 input{
-  outline: none;
-  background-color: #8293ff;
-  color: white;
-  font-size: 25px;
-  padding: 6px 60px;
-  font-weight: bold;
-  border: 1px solid white;
-  cursor: pointer;
-  transition: all 300ms ease 0ms;
-}
-.crd.card1:hover{
-  background-color: #8293ff;
-  color: white;
-  transform: scale(1.05);
-  border: 1px solid rgba(130, 147, 255, 0.5);
-  box-shadow: 0 8px 12px 0 rgba(0,0,0, 0.5);
-} */
-
 .crd .card {
   width: 75%;
   height: auto;
@@ -410,14 +368,82 @@ nav ul li a:hover {
 }
 .crd .card1 {
   width: 300px;
-  /* height: 600px; */
   background-color: rgb(249, 249, 255);
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-left: 2em;
+  margin-left: 2rem;
   transition: all 300ms ease 0ms;
 }
-.crd .card1:hover input{
-  color: rgba(0,0,0, 0.9);
-  background-color: white;
+.crd .card1:hover {
+  background-color: rgb(130 147 255);
+  transform: scale(1.05);
+}
+.crd.card1 h4 {
+  font-size: 50px;
+  padding-top: 8px;
+}
+.card1 p {
+  padding: 1rem;
+}
+.crd .card1 .price {
+  font-size: 40px;
+}
+.crd .card1 input {
+  outline: none;
+  background: #8293ff;
+  color: black;
+  font-size: 25px;
+  padding: 6px 60px;
+  font-weight: bold;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/* footer */
+footer{
+  background-color: rgb(4, 9, 30);
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  color: white;
+  margin-top: 200px;
+}
+footer .foot{
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+.foot1 .abp{
+  width: 480px;
+}
+footer .foot .foot1 p{
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+footer .foot .foot1 input{
+  font-size: 15px;
+  outline: none;
+  border: none;
+  padding: 10px 150px 10px 10px;
+}
+footer .foot .foot1 button{
+  font-size: 18px;
+  color: white;
+  background-color: #8293ff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 15px;
+}
+footer .foot .foot1 i{
+  font-size: 15px;
+  cursor: pointer;
+  padding: 2px 5px;
+}
+footer .foot .foot1 i:hover{
+  color: #8293ff;
 }
